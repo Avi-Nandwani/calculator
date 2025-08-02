@@ -1,0 +1,68 @@
+body {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .calculator {
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    padding: 24px 16px;
+    width: 320px;
+  }
+  #display {
+    background: #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: right;
+    padding: 16px 10px;
+    margin-bottom: 18px;
+    min-height: 48px;
+    overflow-x: auto;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  .btn {
+    font-size: 1.3rem;
+    padding: 16px 0;
+    border: none;
+    border-radius: 6px;
+    background: #444;
+    color: #fff;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #666;
+  }
+  .btn[data-action="clear"] {
+    color: #ff3b30;
+    background: #2c2c2c;
+  }
+  .btn[data-action="backspace"] {
+    color: #fdba00;
+    background: #2c2c2c;
+  }
+  .btn[data-action="add"], 
+  .btn[data-action="subtract"], 
+  .btn[data-action="multiply"],
+  .btn[data-action="divide"] {
+    background: #0059b3;
+  }
+  .btn.equals {
+    grid-row: span 2;
+    background: #008d36;
+    color: #fff;
+  }
+  .btn.zero {
+    grid-column: span 2;
+  }
+  
